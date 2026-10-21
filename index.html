@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport: sem essa linha o celular não aplica a responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>José Gabriel</title>
+    <link rel="icon" href="imagens/favicon-chevette.jpg" type="image/jpeg">
+
+    <!-- Bootstrap 5 (framework CSS) via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Nosso CSS vem DEPOIS do Bootstrap para poder sobrescrever o que for preciso -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegação: recolhe em um botão (hambúrguer) no celular -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">José Gabriel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Quem sou eu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sites">Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gostos">Gostos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+
+        <!-- Seção "Quem sou eu?": 2 colunas no computador, empilhadas no celular -->
+        <section id="inicio" class="row align-items-center g-4 mb-5">
+            <div class="col-12 col-md-6">
+                <h1 class="titulo-secao">Quem sou eu?</h1>
+                <p>Opa, meu nome é José Gabriel de Oliveira Lopes, nasci em Passa e Fica/RN.</p>
+                <p>Gosto bastante de consertar coisas e quanto mais diferente for, mais animado eu fico.</p>
+                <p>Também gosto de ouvir músicas e assistir anime, no momento estou assistindo Vinland Saga.</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <img src="imagens/chevette.jpeg" alt="Chevette prata" class="img-fluid rounded shadow foto-principal">
+            </div>
+        </section>
+
+        <!-- Seção de sites: cada card ocupa 1 coluna no celular e 3 do tablet pra cima -->
+        <section id="sites" class="mb-5">
+            <h2 class="titulo-secao">Sites que eu gosto de acessar</h2>
+            <div class="row g-3">
+                <div class="col-12 col-sm-4">
+                    <a href="https://www.google.com" target="_blank" class="card card-site text-center text-decoration-none h-100">
+                        <div class="card-body">
+                            <img src="imagens/google.jpg" alt="Google" class="logo-site">
+                            <p class="card-text mt-2 mb-0">Google</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <a href="https://www.youtube.com" target="_blank" class="card card-site text-center text-decoration-none h-100">
+                        <div class="card-body">
+                            <img src="imagens/youtube.png" alt="YouTube" class="logo-site">
+                            <p class="card-text mt-2 mb-0">YouTube</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <a href="https://open.spotify.com" target="_blank" class="card card-site text-center text-decoration-none h-100">
+                        <div class="card-body">
+                            <img src="imagens/spotify.png" alt="Spotify" class="logo-site">
+                            <p class="card-text mt-2 mb-0">Spotify</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabela: table-responsive cria rolagem lateral se a tela for muito estreita -->
+        <section id="gostos" class="mb-5">
+            <h2 class="titulo-secao">O que eu gosto e por quê</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Preferências pessoais</th>
+                            <th>Por que gosto?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chevette</td>
+                            <td>Porque é o melhor carro do mundo</td>
+                        </tr>
+                        <tr>
+                            <td>Jogar</td>
+                            <td>Porque ajuda a aliviar o estresse do dia a dia</td>
+                        </tr>
+                        <tr>
+                            <td>Rio Grande do Norte</td>
+                            <td>Porque foi o lugar onde nasci</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-light text-center py-3">
+        <small>José Gabriel de Oliveira Lopes</small>
+    </footer>
+
+    <!-- JS do Bootstrap: necessário para o menu hambúrguer funcionar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
